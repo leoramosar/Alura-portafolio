@@ -1,110 +1,284 @@
-/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
-*/
 :root {
-    --color-de-fondo: #F5F5F5;
-    --color-de-fondo-menu: #ffffff;
-    --color-de-link: #000000;
+  --color-de-fondo: #f5f5f5;
+  --color-de-fondo-menu: #ffffff;
+  --color-de-link: #000000;
+  --color--sky: #eaf2fd;
 }
 
 body {
-    background-color: var(--color-de-fondo);
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    line-height: 1.6;
+  background-color: var(--color-de-fondo);
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  line-height: 1.6;
+  color: #464646;
 }
 
-ol, ul, li {
-    list-style: none;
+ol,
+ul,
+li {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: var(--color-de-link);
+  text-decoration: none;
+  color: var(--color-de-link);
 }
 
 /* ------------------------------ Sección Menú -------------------------------*/
 .cabecera {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-de-fondo-menu);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--color-de-fondo-menu);
 }
 
 .cabecera__logo {
-    max-width: 80px; /* Ajuste para pantallas pequeñas */
+  display: flex;
+}
+.cabecera__img {
+  max-width: 80px; /* Ajuste para pantallas pequeñas */
+  height: auto;
 }
 
 .cabecera__titulo {
-    font-size: 1.2rem;
-    text-align: center;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
 }
 
 .navegacion__lista {
-    display: none;
+  display: none;
 }
 
 .navegacion__elemento a {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 /* ------------------------------ Sección Presentación ------------------------------*/
 
+.presentacion__contenedor_foto {
+  padding: 20px;
+}
+.presentacion__foto {
+  width: 100%;
+  text-align: center;
+  height: auto;
+}
+.presentacion__contenedor {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-de-fondo-menu);
+}
+.presentacion__titulo {
+  font-size: 1.5rem;
+  text-align: center;
 
+  background-color: var(--color-de-fondo-menu);
+}
+.presentacion__subtitulo {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-de-fondo-menu);
+}
+
+.redes {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-de-fondo-menu);
+  padding: 0 10px;
+}
+
+.redes__img {
+  text-align: center;
+  background-color: var(--color-de-fondo-menu);
+  padding: 0 5px;
+}
+
+.redes__img a {
+  display: flex;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: var(--color-de-fondo-menu);
+}
+.redes__img img {
+  width: 8px;
+  height: 8px;
+}
 /* ------------------------------ Sección sobre mí ----------------------------------*/
 
+.sobre-mi {
+  padding: 1rem;
+  background-color: var(--color--section-about);
+}
+
+.sobre-mi__titulo {
+  font-size: 1rem;
+  padding: 1rem;
+}
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
 
+.skills {
+  padding: 0 20px;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.skills__element {
+  background: white;
+  min-width: 130px;
+  margin-bottom: 32px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  font-weight: bold;
+}
+
+.skills__element p {
+  margin: 0;
+}
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
 
-
 /*------------------------------ Sección de Proyectos --------------------------------*/
-
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
 
+.contacto {
+  padding: 1rem;
+  background-color: var(--color--sky);
+}
+
+.contacto .contacto__formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto .contacto__formulario-input {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.contacto__formulario-input label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: #a2a2a2;
+}
+.contacto__formulario-input .label-area {
+  position: absolute;
+  top: 18%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: #a2a2a2;
+}
+
+.contacto .contacto__campo {
+  padding: 1rem;
+  padding-top: 1.4rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  border-bottom: 2px solid #c8c8c8;
+  outline: none;
+  width: 100%;
+}
+
+.contacto .contacto__campo--textarea {
+  height: 100px;
+}
+
+.contacto__campo:focus + label {
+  top: 11px;
+  left: 15px;
+  font-size: 12px;
+  padding: 0;
+  background: white;
+}
+
+.contacto__campo:not(:placeholder-shown) + label {
+  top: 11px;
+  left: 15px;
+  font-size: 12px;
+  padding: 0;
+  background: white;
+  color: #2a7ae4;
+}
+
+.contacto .contacto__campo:focus {
+  border-bottom: 2px solid #2a7ae4 !important;
+}
+
+.contacto__formulario .contacto__boton {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2a7ae4;
+  color: white;
+  cursor: pointer;
+}
+
+.contacto__formulario .contacto__boton:hover {
+  background-color: #0a4ea7;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
 /* Tablets y pantallas más grandes */
 @media (min-width: 768px) {
-    .cabecera {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .cabecera {
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .cabecera__logo {
-        max-width: 100px;
-    }
+  .cabecera__titulo {
+    font-size: 1.5rem;
+  }
 
-    .cabecera__titulo {
-        font-size: 1.5rem;
-    }
+  .navegacion__lista {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
 
-    .navegacion__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
+  .navegacion__elemento a {
+    font-size: 1rem;
+  }
 
-    .navegacion__elemento a {
-        font-size: 1rem;
-    }
-}
+  /* skills */
+  .skills__element {
+    background: white;
+    width: 220px;
+  }
 
-/* Pantallas grandes */
-@media (min-width: 1024px) {
+  /* Pantallas grandes */
+  @media (min-width: 1024px) {
     /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
     .cabecera__titulo {
-        font-size: 1.8rem;
+      font-size: 1.8rem;
     }
 
     .navegacion__elemento a {
-        font-size: 1.1rem;
+      font-size: 1.1rem;
     }
+  }
 }
